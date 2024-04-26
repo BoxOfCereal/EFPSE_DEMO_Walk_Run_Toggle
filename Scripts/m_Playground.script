@@ -1,0 +1,11 @@
+global.WALKSPEED=250
+global.RUNSPEED=500
+global.key_toggleRun=0
+global.player_speed=0
+global.player_running=0
+
+//player speed [value] - changes player speed. 
+global.player_speed+=$global.WALKSPEED
+player speed $global.WALKSPEED
+text "player_speed $global.player_speed, player_running $global.player_running, key_toggleRun $global.key_toggleRun, WALKSPEED $global.WALKSPEED, RUNSPEED $global.RUNSPEED" 255 255 255
+map start
