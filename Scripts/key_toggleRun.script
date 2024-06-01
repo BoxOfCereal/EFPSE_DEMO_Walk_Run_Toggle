@@ -1,16 +1,17 @@
 //`key_toggleRun.script`- script to toggle between walking and running
-if "$global.player_running" == 0 {
-    global.player_running=1
-    global.player_speed=0
-    global.player_speed+=$global.RUNSPEED
-    player speed $global.RUNSPEED
-    //text "Running at $global.player_speed units, should be $global.RUNSPEED" 255 255 255
+//TEST
+if $global.player_running == 0 {
+global.player_running=1
+global.player_speed=0
+global.player_speed+=$global.RUNSPEED
+player speed $global.RUNSPEED
+//text "Running at $global.player_speed units, should be $global.RUNSPEED" 255 255 255
 } else {
-    global.player_running=0
-    global.player_speed=0
-    global.player_speed+=$global.WALKSPEED
-    player speed $global.WALKSPEED
-    //text "Walking at $global.player_speed units, should be $global.WALKSPEED" 255 255 255
+global.player_running=0
+global.player_speed=0
+global.player_speed+=$global.WALKSPEED
+player speed $global.WALKSPEED
+//text "Walking at $global.player_speed units, should be $global.WALKSPEED" 255 255 255
 }
 //map quickreturn [KeepSounds? 0/1/2/3]
 map quickreturn keepsounds2
