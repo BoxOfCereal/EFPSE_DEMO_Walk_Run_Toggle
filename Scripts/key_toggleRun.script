@@ -1,34 +1,16 @@
 //`key_toggleRun.script`- script to toggle between walking and running
-// Developer comment:
-    // No matter what I do I can't seem to actually set a variable 
-    // Using this syntax:
-    // global.player_speed=$global.WALKSPEED
-    // So I've had to use this hacky way
-    // global.player_speed*=0
-    // global.player_speed+=$global.WALKSPEED
-    // "Clear the variable by multiplying by zero, add equal the desired value"
-
-    //[12:59 PM]Мужик с Чашкой:
-    // No matter what I do I can't seem to actually set a variable 
-    // Using this syntax:
-    // global.player_speed=$global.WALKSPEED
-    // Actually, you can do this. Once. And after that any attempts to change the variable will not work/crash the game.
-    // "Clear the variable by multiplying by zero, add equal the desired value"
-    //Clever girl. But multiplying is a tricky thing (especially when you deal with efpse). You can just assign the value to zero directly. I feel it's more safe this way. 
-
-//To get the script working seamlessly just remove the text statements(lines 16,22).
 if "$global.player_running" == 0 {
     global.player_running=1
     global.player_speed=0
     global.player_speed+=$global.RUNSPEED
     player speed $global.RUNSPEED
-    text "Running at $global.player_speed units, should be $global.RUNSPEED" 255 255 255
+    //text "Running at $global.player_speed units, should be $global.RUNSPEED" 255 255 255
 } else {
     global.player_running=0
     global.player_speed=0
     global.player_speed+=$global.WALKSPEED
     player speed $global.WALKSPEED
-    text "Walking at $global.player_speed units, should be $global.WALKSPEED" 255 255 255
+    //text "Walking at $global.player_speed units, should be $global.WALKSPEED" 255 255 255
 }
 //map quickreturn [KeepSounds? 0/1/2/3]
 map quickreturn keepsounds2
